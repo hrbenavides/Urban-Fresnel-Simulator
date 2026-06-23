@@ -1,4 +1,4 @@
-# Multi-Model Fresnel Zone & RF Link Budget Simulator
+# Fresnel Zone Simulator
 
 Este repositorio contiene una suite avanzada de simulación tridimensional y bidimensional para la planificación, análisis de factibilidad y cálculo de presupuesto de potencia (*Link Budget*) en radioenlaces de telecomunicaciones. El software ha sido desarrollado con un enfoque de alta fidelidad visual y precisión matemática milimétrica, sirviendo como herramienta de ingeniería tanto para entornos urbanos complejos como para enlaces rurales de larga distancia.
 
