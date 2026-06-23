@@ -18,12 +18,6 @@ Diseñado para escenarios metropolitanos densos donde las estructuras civiles y 
 * **Cálculo de Potencia Integrado:** Evalúa de forma dinámica la Pérdida por Propagación en el Espacio Libre (FSPL) acoplada a castigos por difracción de la UIT-R ante la invasión del elipsoide.
 * **Interfaz Estilo CAD:** Renderizado tridimensional interactivo con estética oscura (*Blender Dark*), soporte para modo Rayos X (estructuras transparentes) y cotas dinámicas en el lienzo.
 
-### 2. Módulo Rural de Larga Distancia 2D (`fresnel_large8.py`)
-Optimizado para el análisis de trayectorias en topografías extensas donde la geometría planetaria limita el horizonte de radiofrecuencia.
-* **Modelo de Tierra Plana Equivalente:** Implementa el estándar de la industria (utilizado por plataformas como *Radio Mobile* o *Airlink*) manteniendo la Línea de Vista (LOS) recta y aplicando la flecha de curvatura atmosférica directamente sobre la cota del obstáculo.
-* **Corrección por Factor K:** Incorpora el factor de refracción atmosférica ajustable (por defecto $K = 4/3$) para simular condiciones de sub-refracción o súper-refracción en la atmósfera.
-* **Sincronización Gráfica Analítica:** Garantiza que cualquier invasión matemática a la zona crítica del $60\%$ de Fresnel se refleje instantáneamente en el Viewport mediante códigos de color semánticos (Verde: Factible, Naranja: Inviable, Rojo: Obstruido).
-
 ---
 
 ## 📊 Fundamentos Matemáticos Utilizados
