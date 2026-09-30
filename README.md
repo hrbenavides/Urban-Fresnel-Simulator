@@ -1,5 +1,3 @@
-===== INICIO DEL README =====
-
 # Urban Fresnel Simulator
 
 Simulador tridimensional de planificación, análisis de factibilidad y cálculo de presupuesto de potencia (*Link Budget*) para radioenlaces urbanos, basado en el análisis del **elipsoide de Fresnel** y la **difracción por obstáculos** según la recomendación **UIT-R P.526**.
