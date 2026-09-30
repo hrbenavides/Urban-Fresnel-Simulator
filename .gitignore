@@ -216,3 +216,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ----------------------------------------------------------------
+# Notas personales (no subir a GitHub)
+# ----------------------------------------------------------------
+*.md
+!README.md
+!LICENSE
