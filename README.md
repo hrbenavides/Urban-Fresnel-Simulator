@@ -1,73 +1,73 @@
-# Urban Fresnel Simulator
+<div align="center">
 
-Simulador tridimensional de planificación, análisis de factibilidad y cálculo de presupuesto de potencia (*Link Budget*) para radioenlaces urbanos, basado en el análisis del **elipsoide de Fresnel** y la **difracción por obstáculos** según la recomendación **UIT-R P.526**.
+# 📡 Urban Fresnel Simulator
 
-Herramienta de ingeniería diseñada para escenarios metropolitanos densos, donde los edificios y las estructuras civiles representan el mayor desafío de propagación.
+**Simulador profesional de enlaces de radiofrecuencia urbanos**  
+Cálculo geométrico de zona de Fresnel, análisis multi-obstáculo y veredicto automático de viabilidad.
 
-**Autor:** Univ. Henry Rafael Benavides Gutierrez  
-**Institución:** Universidad Mayor de San Andrés — Facultad de Ingeniería
+[![Descargar ejecutable](https://img.shields.io/badge/⬇️_Descargar-Ejecutable-blue?style=for-the-badge)](https://github.com/hrbenavides/Urban-Fresnel-Simulator/releases)
+[![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+[![Estado](https://img.shields.io/badge/Estado-Activo-brightgreen?style=flat-square)]()
+
+</div>
 
 ---
 
-## 📥 Descarga
+## 🌐 Descripción general
 
-¿Solo quieres usar el programa? **Descarga el ejecutable desde la sección [Releases](../../releases)**.
+**Urban Fresnel Simulator** es una herramienta de escritorio desarrollada en Python para el **análisis y diseño de enlaces de telecomunicaciones en entornos urbanos**. Permite evaluar la viabilidad de un enlace punto a punto considerando obstáculos reales (edificios, terreno, vegetación) y aplicando los modelos de propagación recomendados por la UIT.
 
-- ✅ No requiere instalar Python.
-- ✅ No requiere instalar dependencias.
-- ✅ Doble clic y a trabajar.
-- 🖥️ Compatible con Windows 10 / 11 (64-bit).
+El simulador integra un motor geométrico propio, una interfaz gráfica tipo CAD y un sistema de análisis automático que entrega un **veredicto claro sobre la calidad del enlace**.
 
 ---
 
 ## ✨ Características principales
 
-- **Análisis de superficie de techo adaptativo:** escaneo tridimensional de tapas y aristas de las estructuras para hallar el punto crítico de aproximación macroscópica (*t\**).
-- **Motor geométrico 3D real:** soporta rotación axial independiente de las estructuras y posicionamiento de antenas en cualquiera de las 4 esquinas del tejado o su eje central.
-- **Cálculo de potencia integrado:** evalúa dinámicamente la Pérdida por Propagación en el Espacio Libre (FSPL), acoplada a castigos por difracción de la UIT-R ante la invasión del elipsoide.
-- **Análisis multi-obstáculo:** soporte para hasta **6 obstáculos urbanos** configurables en posición, altura, ancho, offset lateral y rotación.
-- **Presupuesto de potencia completo:** potencia Tx (dBm / W / kW), ganancias de antena (dB / dBi / dBd), sensibilidad del receptor (dBm / W / kW / µW / nW) y margen de seguridad configurable.
-- **Interfaz estilo CAD:** renderizado tridimensional interactivo con estética oscura (*Blender Dark*), modo Rayos X (estructuras translúcidas) y cotas dinámicas en el lienzo.
-- **Veredicto automático de factibilidad:** evaluación combinada de geometría (despeje al 60 %) y potencia (margen respecto a la sensibilidad).
+- 🧮 **Motor geométrico propio** — cálculo de la primera zona de Fresnel y su porcentaje de obstrucción.
+- 🏙️ **Análisis multi-obstáculo** — soporta múltiples edificios y perfiles de terreno entre el transmisor y el receptor.
+- 🖥️ **Interfaz gráfica tipo CAD** — dibujo interactivo de obstáculos sobre el perfil del enlace.
+- 📊 **Modelo de difracción UIT-R P.526** — atenuación por filo de cuchillo aplicada automáticamente.
+- ⚡ **Presupuesto de potencia** — cálculo de FSPL, potencia recibida y margen del enlace.
+- ✅ **Veredicto automático** — clasifica el enlace como *viable*, *marginal* o *no viable*.
+- 🎨 **Modo Rayos X** — visualización esquemática del trazado del enlace.
+- 💾 **Exportación de resultados** — guarda reportes en formato de texto e imagen.
 
 ---
 
-## 📊 Fundamentos matemáticos
+## 🖼️ Capturas
 
-**Radio de la *n*-ésima zona de Fresnel:**
+> *(Reemplaza estas rutas con tus propias capturas — súbelas a la carpeta `docs/`)*
 
-$$r_n = \sqrt{\frac{n \cdot \lambda \cdot d_1 \cdot d_2}{D_{\text{real}}}}$$
-
-**Atenuación por difracción de filo de cuchillo (UIT-R P.526):**
-
-$$\nu = H \sqrt{\frac{2 (d_1 + d_2)}{\lambda \, d_1 \, d_2}}$$
-
-$$A_{\text{dif}} = 6.9 + 20 \log_{10} \left( \sqrt{(\nu - 0.1)^2 + 1} + \nu - 0.1 \right)$$
-
-**Presupuesto de potencia:**
-
-$$P_{rx}\ (\text{dBm}) = P_{tx} + G_{tx} + G_{rx} - FSPL - A_{\text{dif}} - M_{\text{seg}}$$
-
-donde $FSPL = 20\log_{10}(d) + 20\log_{10}(f) - 147.55$.
+| Vista principal | Análisis multi-obstáculo | Modo Rayos X |
+|:---:|:---:|:---:|
+| ![Vista principal](docs/screenshot-main.png) | ![Multi-obstáculo](docs/screenshot-multiobstacle.png) | ![Rayos X](docs/screenshot-xray.png) |
 
 ---
 
-## 🖥️ Requisitos
+## 🛠️ Tecnologías utilizadas
 
-- **Windows 10 / 11 (64-bit)** para el ejecutable.
-- **Python 3.10 o superior** (probado en 3.14) si se ejecuta desde el código fuente.
-- **Tkinter** (incluido en la instalación estándar de Python en Windows).
-
-Dependencias de Python:
-
-- `numpy`
-- `matplotlib`
+| Capa | Tecnología |
+|------|------------|
+| Lenguaje | Python 3.9+ |
+| Interfaz gráfica | PyQt5 / PySide2 |
+| Cálculo numérico | NumPy |
+| Gráficos | Matplotlib |
+| Empaquetado | PyInstaller |
+| Distribución | GitHub Releases |
 
 ---
 
-## 🚀 Ejecutar desde el código fuente
+## 🚀 Instalación y uso
 
-Si quieres modificar el código o contribuir:
+### Opción 1 — Descargar el ejecutable (recomendado)
+
+1. Ve a la sección de **[Releases](https://github.com/hrbenavides/Urban-Fresnel-Simulator/releases)**.
+2. Descarga el archivo correspondiente a tu sistema operativo.
+3. Descomprime y ejecuta `UrbanFresnel.exe` (Windows) o el binario equivalente.
+4. No requiere instalación de Python ni dependencias.
+
+### Opción 2 — Ejecutar desde el código fuente
 
 ```bash
 # 1. Clonar el repositorio
@@ -76,10 +76,118 @@ cd Urban-Fresnel-Simulator
 
 # 2. Crear y activar un entorno virtual
 python -m venv venv
+
+# Windows:
 venv\Scripts\activate
+
+# Linux / macOS:
+source venv/bin/activate
 
 # 3. Instalar dependencias
 pip install -r requirements.txt
 
-# 4. Ejecutar
+# 4. Ejecutar el simulador
 python fresnel15.py
+```
+
+---
+
+## 📐 Fundamentos matemáticos
+
+El simulador implementa los modelos de propagación de la **Unión Internacional de Telecomunicaciones (UIT)** para el análisis de enlaces en entornos urbanos.
+
+### Radio de la n-ésima zona de Fresnel
+
+$$r_n = \sqrt{\frac{n \lambda d_1 d_2}{d_1 + d_2}}$$
+
+donde:
+
+- $r_n$ — radio de la n-ésima zona de Fresnel (m)
+- $\lambda$ — longitud de onda (m)
+- $d_1$, $d_2$ — distancias del obstáculo al transmisor y receptor (m)
+
+### Atenuación por difracción — filo de cuchillo (UIT-R P.526)
+
+$$A_d = 6.9 + 20 \log_{10}\left(\sqrt{(v - 0.1)^2 + 1} + v - 0.1\right)$$
+
+donde $v$ es el parámetro de Fresnel-Kirchhoff:
+
+$$v = h \sqrt{\frac{2 (d_1 + d_2)}{\lambda d_1 d_2}}$$
+
+### Presupuesto de potencia del enlace
+
+$$P_{rx} = P_{tx} + G_{tx} + G_{rx} - FSPL - A_d$$
+
+donde el **espacio libre (FSPL)** se calcula como:
+
+$$FSPL = 20 \log_{10}(d) + 20 \log_{10}(f) - 147.55$$
+
+con $d$ en metros y $f$ en Hz.
+
+---
+
+## 📊 Interpretación del veredicto
+
+El simulador clasifica el enlace según el porcentaje de obstrucción de la primera zona de Fresnel:
+
+| Obstrucción | Veredicto | Interpretación |
+|:---:|:---:|:---|
+| **< 20 %** | ✅ **Viable** | Enlace con margen suficiente para operar. |
+| **20 % – 40 %** | ⚠️ **Marginal** | Enlace operable pero con degradación notable. |
+| **> 40 %** | ❌ **No viable** | Obstrucción crítica, requiere rediseño. |
+
+---
+
+## 📁 Estructura del proyecto
+
+```
+Urban-Fresnel-Simulator/
+├── fresnel15.py           # Script principal del simulador
+├── requirements.txt       # Dependencias del proyecto
+├── LICENSE                # Licencia MIT
+├── README.md              # Este archivo
+├── docs/                  # Capturas y documentación adicional
+│   └── screenshot-*.png
+└── dist/                  # Ejecutables generados con PyInstaller
+```
+
+---
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas. Si deseas mejorar el simulador:
+
+1. Haz un **fork** del repositorio.
+2. Crea una rama para tu mejora: `git checkout -b feature/nueva-funcionalidad`.
+3. Realiza tus cambios y haz commit: `git commit -m "Añade nueva funcionalidad"`.
+4. Haz push a tu rama: `git push origin feature/nueva-funcionalidad`.
+5. Abre un **Pull Request**.
+
+---
+
+## 📝 Licencia
+
+Este proyecto está bajo la licencia **MIT**. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+
+---
+
+## 👨‍💻 Autor
+
+**Henry Benavides**
+
+- GitHub: [@hrbenavides](https://github.com/hrbenavides)
+- Proyecto desarrollado como parte del curso de **Ingeniería Electrónica — UMSA**
+
+---
+
+<div align="center">
+
+## 📥 ¿Listo para probarlo?
+
+👉 **[Descargar la última versión aquí](https://github.com/hrbenavides/Urban-Fresnel-Simulator/releases)**
+
+<br>
+
+Hecho en Bolivia ❤️💛💚
+
+</div>
