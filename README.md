@@ -6,6 +6,8 @@
 Cálculo geométrico de zona de Fresnel, análisis multi-obstáculo y veredicto automático de viabilidad.
 
 [![Descargar ejecutable](https://img.shields.io/badge/⬇️_Descargar-Ejecutable-blue?style=for-the-badge)](https://github.com/hrbenavides/Urban-Fresnel-Simulator/releases)
+
+
 [![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 [![Estado](https://img.shields.io/badge/Estado-Activo-brightgreen?style=flat-square)]()
