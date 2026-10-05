@@ -35,16 +35,6 @@ El simulador integra un motor geométrico propio, una interfaz gráfica tipo CAD
 
 ---
 
-## 🖼️ Capturas
-
-> *(Reemplaza estas rutas con tus propias capturas — súbelas a la carpeta `docs/`)*
-
-| Vista principal | Análisis multi-obstáculo | Modo Rayos X |
-|:---:|:---:|:---:|
-| ![Vista principal](docs/screenshot-main.png) | ![Multi-obstáculo](docs/screenshot-multiobstacle.png) | ![Rayos X](docs/screenshot-xray.png) |
-
----
-
 ## 🛠️ Tecnologías utilizadas
 
 | Capa | Tecnología |
